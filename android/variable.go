@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"slim/soong/android"
+	"liquid/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -88,8 +88,8 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
-		// include Slim variables
-		Slim android.Product_variables
+		// include LS variables
+		Liquid android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -156,8 +156,8 @@ type productVariables struct {
 
 	Override_rs_driver *string `json:",omitempty"`
 
-	// include Slim variables
-	Slim android.ProductVariables
+	// include LS variables
+	Liquid android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
